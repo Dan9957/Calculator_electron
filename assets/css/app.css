@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    position: absolute;
+    margin: 0px;
+    overflow: hidden;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    font-size: x-large;
+}
+.h-50{
+    height: 50px !important;
+}
+
+.in{
+    border:none;
+    color:lightcyan;
+    background-color: rgb(54, 54, 54);
+    height: 50px;
+}
+.bttn{
+    height: 100px !important;
+}
+.sum{
+    height: 50px;
+}
+.bttn:hover{
+    background:radial-gradient(#632df7,#440ae4)!important;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/cal.jpg">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/css/app.css"/>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+        function dis(val) 
+         { 
+             document.getElementById("result").value+=val;
+         } 
+           
+         //function that evaluates the digit and return result 
+         function solve() 
+         { 
+             let x = document.getElementById("result").value;
+             let y = eval(x);
+             document.getElementById("result").value = y.toString();
+         } 
+           
+         //function that clear the display 
+         function clr() 
+         { 
+             document.getElementById("result").value = ""; 
+         } 
+    </script>
+</head>
+<body>
+    <div class="head">
+        <input type="text" readonly id="result" class="w-100 in">
+    </div>
+    <div class="body">
+        <div class="row">
+            <div class="col-3 d-flex justify-content-center bg-dark h-50 bttn h-50 pt-5 shadow-lg text-light" onclick="dis('/')">/</div>
+            <div class="col-3 d-flex justify-content-center bg-dark h-50 bttn h-50 pt-5 shadow-lg text-light" onclick="dis('-')">-</div>
+            <div class="col-3 d-flex justify-content-center bg-dark h-50 bttn h-50 pt-5 shadow-lg text-light" onclick="dis('+')">+</div>
+            <div class="col-3 d-flex justify-content-center bg-dark h-50 bttn h-50 pt-5 shadow-lg text-light" onclick="dis('*')">*</div>
+            <div class="col-4 d-flex justify-content-center bg-dark shadow-lg text-light h-50 pt-5 bttn" onclick="dis('1')">1</div>
+            <div class="col-4 d-flex justify-content-center bg-dark shadow-lg text-light h-50 pt-5 bttn" onclick="dis('2')">2</div>
+            <div class="col-4 d-flex justify-content-center bg-dark shadow-lg text-light h-50 pt-5 bttn" onclick="dis('3')">3</div>
+            <div class="col-4 d-flex justify-content-center bg-dark shadow-lg text-light h-50 pt-5 bttn" onclick="dis('4')">4</div>
+            <div class="col-4 d-flex justify-content-center bg-dark shadow-lg text-light h-50 pt-5 bttn" onclick="dis('5')">5</div>
+            <div class="col-4 d-flex justify-content-center bg-dark shadow-lg text-light h-50 pt-5 bttn" onclick="dis('6')">6</div>
+            <div class="col-4 d-flex justify-content-center bg-dark shadow-lg text-light h-50 pt-5 bttn" onclick="dis('7')">7</div>
+            <div class="col-4 d-flex justify-content-center bg-dark shadow-lg text-light h-50 pt-5 bttn" onclick="dis('8')">8</div>
+            <div class="col-4 d-flex justify-content-center bg-dark shadow-lg text-light h-50 pt-5 bttn" onclick="dis('9')">9</div>
+            <div class="col-12 d-flex justify-content-center bg-dark shadow-lg text-light h-50 pt-5 bttn" onclick="dis('0')">0</div>
+            <div class="col-6 d-flex justify-content-center bg-dark shadow-lg text-light bttn sum pt-1" onclick="solve()">=</div>
+            <div class="col-6 d-flex justify-content-center bg-dark shadow-lg text-light bttn sum pt-1" onclick="clr()">C</div>
+        </div>
+    </div>
+</body>
+</html>
